@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollypop TICKET ($HPOP)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .background-text {
+            position: absolute;
+            width: 100%;
+            font-size: 2em;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.1);
+            animation: moveText 10s linear infinite;
+        }
+        @keyframes moveText {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(100vh); }
+        }
+        .falling-text {
+            position: absolute;
+            top: -50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: rgba(0, 255, 255, 0.3);
+            animation: falling 5s linear infinite;
+        }
+        @keyframes falling {
+            0% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 20px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .roadmap {
+            text-align: left;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createFallingText() {
+            let text = document.createElement("div");
+            text.classList.add("falling-text");
+            text.innerHTML = "HOLLYPOP";
+            text.style.left = Math.random() * window.innerWidth + "px";
+            text.style.animationDuration = (Math.random() * 5 + 3) + "s";
+            document.body.appendChild(text);
+            setTimeout(() => { text.remove(); }, 5000);
+        }
+        setInterval(createFallingText, 500);
+    </script>
+    <div class="container">
+        <h1>🚀 Welcome to Hollypop Offical Web-Site 🎟️</h1>
+        <p>The sweetest ride to the moon! Join the revolution now.</p>
+        <img src="\Users\USER\Downloads\hpop\hpop.png" alt="$HPOP">
+        <a href="#" class="btn">Buy $HPOP</a>
+        <a href="#" class="btn">Join Community</a>
+        
+        <div class="roadmap">
+            <h2>📍 HOLLYPOP ROADMAP 🏆</h2>
+            <h3>📌 Phase 1: Launch & Community Building</h3>
+            <ul>
+                <li>✅ Token smart contract deployment</li>
+                <li>✅ Website & social media launch</li>
+                <li>✅ Meme & viral marketing campaigns</li>
+                <li>✅ Airdrop & giveaway promotions</li>
+                <li>✅ Initial DEX listing</li>
+            </ul>
+            <h3>🔥 Phase 2: Growth & Expansion</h3>
+            <ul>
+                <li>📌 CoinGecko & CoinMarketCap listing application</li>
+                <li>📌 Strategic partnerships with influencers & crypto projects</li>
+                <li>📌 Community engagement events & contests</li>
+                <li>📌 First batch of NFT collectibles launch</li>
+                <li>📌 5,000+ holders milestone</li>
+            </ul>
+            <h3>🚀 Phase 3: Utility & Ecosystem Development</h3>
+            <ul>
+                <li>📌 Staking & reward mechanisms introduction</li>
+                <li>📌 Expansion to centralized exchanges (CEX listings)</li>
+                <li>📌 Merch store & exclusive community rewards</li>
+                <li>📌 DAO integration for governance</li>
+                <li>📌 25,000+ holders milestone</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
